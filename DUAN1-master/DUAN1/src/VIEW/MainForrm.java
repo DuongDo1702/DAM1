@@ -169,6 +169,11 @@ public class MainForrm extends javax.swing.JFrame {
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.setMargin(new java.awt.Insets(12, 30, 12, 30));
         jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton4);
         jToolBar1.add(jSeparator4);
 
@@ -354,6 +359,15 @@ public class MainForrm extends javax.swing.JFrame {
 	JOptionPane.showMessageDialog(this, "Vui lòng đăng nhập");
 	}
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(Auth.islogin()){
+            NhaPhanphoiJInternalFrame npp = new NhaPhanphoiJInternalFrame();
+            openX(npp);
+        }else{
+            JOptionPane.showMessageDialog(this, "Vui lòng đăng nhập");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
